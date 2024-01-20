@@ -34,7 +34,7 @@ export const useCartStore = create<CartStore>()((set) => ({
             return ({ products: updatedCart });
         })
     },
-    removeAll: () => set(state => {
+    removeAll: () => set(() => {
 
         localStorage.setItem('cart', '[]');
 
